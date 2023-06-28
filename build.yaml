@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      store_generator|store_generator:
+        enabled: true
+
+builders:
+  store:
+    target: ":store_generator"
+    import: "package:store_generator/builder.dart"
+    builder_factories: ["store"]
+    build_extensions: {".dart": [".g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
