@@ -20,7 +20,7 @@ class StoreGenerator extends GeneratorForAnnotation<StoreAnnotation> {
     StringBuffer buffer = StringBuffer();
 
     // Write the class
-    buffer.writeln('abstract class \$${classVisitor.className} extends Store {');
+    buffer.writeln('abstract class \$${classVisitor.className}<A, S> extends Store<A, S> {');
 
     // Write the actions map
     buffer.writeln("@override");
