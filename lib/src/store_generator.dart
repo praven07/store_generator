@@ -35,7 +35,7 @@ class StoreGenerator extends GeneratorForAnnotation<StoreAnnotation> {
 
     // Write method calls.
     for (var method in classVisitor.methods) {
-      buffer.writeln("${method.name}(${method.annotationParameterType} event);");
+      buffer.writeln("${method.name}(${method.annotationParameterType} action);");
     }
 
 
